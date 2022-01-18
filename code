@@ -1,8 +1,6 @@
 /******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
+ * COW BULL GAME :-
+ *                 MADE BY :- GUNJAN VYAS
 
 *******************************************************************************/
 #include<iostream>
@@ -24,15 +22,17 @@ bool isNotrepeating (int s[],int n){
 
 }
 int main(){
-    cout<<" ~~~~~~~~~~~~~~~ YOU NEED TO FIND 4-digit PIN ranging from (1000 - 9999) using hints "<<endl;
-    cout<<" REMINDER this 4 digit number has non repeating digits! "<<endl;
+    cout<<endl;
+    cout<<" ~~~~~~~~~~~~~~~ YOU NEED TO FIND 4-digit PIN ranging from (1000 - 9999) using hints(Cows and Bull) ~~~~~~~~~~~~~~~~ "<<endl;
+    cout<<"REMINDER this 4 digit number has non repeating digits! "<<endl;
     cout<<"BEST OF LUCK !!"<<endl;
 	int s[4];
 	do{
+
      int random_number = std::experimental::randint(1000, 9999);
-    std::cout << "random 4-digit number: " << random_number << '\n';
-//  srand (time(NULL));
-//    int NumToPredict = rand() % 8999+1000;  // give random number range 
+    //  std::cout << "random 4-digit number: " << random_number << '\n';
+    //  srand (time(NULL));
+    //    int NumToPredict = rand() % 8999+1000;  // give random number range 
     
 
 	for(int i=0;i<4;i++){
@@ -40,29 +40,17 @@ int main(){
         random_number=random_number/10;
     }
 }while(!isNotrepeating(s,4));
-    // for(int i=0;i<4;i++){
-    //    cout<<s[i]<<endl;
-    // }
-    //taking input
+   
       int b[4];
       int n=100;
     do{
     int a;
     cin>>a;
     if(a==-1){
-      cout<<" the number was "<<s[0]<<s[1]<<s[2]<<s[3]<<endl;
+      cout<<" The number was "<<s[0]<<s[1]<<s[2]<<s[3]<<endl;
      return 0;   
     }
-    // int cnt=0;
-    // while(a>0){
-    //     a=a/10;
-    //     cnt++;
-    // }
-    // if(cnt!=3){
-    //     cout<<cnt<<endl;
-    //     return 0;  
-    // } 
-    // cout<<"size "<<sizeof(a)/sizeof(a[0])<<endl;
+   
     int i=0;
     while(a>0){
         b[i]=a%10;
@@ -70,13 +58,10 @@ int main(){
         i++;
     }
     if(i!=4){
-        cout<<" you have given repeating digit or not given 4 digit number "<<endl;
+        cout<<" You have given repeating digit or not given 4 digit number "<<endl;
         continue;  
     } 
-    // for(int i=3;i>=0;i--){
-    //     b[i]=a%10;
-    //     a=a/10;
-    // }
+   
     int count=0;
     for(int i=0;i<4;i++){
         if(b[i]==s[i]){
@@ -84,20 +69,17 @@ int main(){
         }
     }
     int sizeb=sizeof(b)/sizeof(b[0]);
-    //cout<<" size of b"<<sizeb<<endl;
-    // cout<<sizeb<<" size "<<endl;
-    // if(sizeb!=4)
-    //     return 0;
+    
     if(b[0]==0 && b[1]==0 &&b[2]==0&&b[3]==0){
-    cout<<" the number was "<<s[0]<<s[1]<<s[2]<<s[3]<<endl;
+    cout<<" The number was "<<s[0]<<s[1]<<s[2]<<s[3]<<endl;
 	return 0;	
 	}
     if((!isNotrepeating(b,4)) || sizeb<3){
-    	cout<<" you have given repeating digit or not given 4 digit number "<<endl;
+    	cout<<" You have given repeating digit or not given 4 digit number "<<endl;
     	continue;
 	}
     if(count==4){
-        cout<<" ooowho you got it right !!"<<endl;
+        cout<<" Woohoo you got it right !!"<<endl;
         break;
         return 0;
     } 
@@ -117,10 +99,10 @@ int main(){
         }
     }
    // int countcow= countC-countBull;
-    cout<<" for given number "<<countC<<" cow "<<" and "<<countBull<<" bull "<<endl;
+    cout<<" For given number "<<countC<<" Cow "<<" and "<<countBull<<" Bull "<<endl;
     n--;
     }while(n>0);
-    cout<<" you took "<<abs(n-99)<<" attempts "<<endl;
+    cout<<" You took "<<abs(n-99)<<" attempts "<<endl;
     
     return 0;
 }
