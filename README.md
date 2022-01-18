@@ -4,4 +4,5 @@
 ![image](https://user-images.githubusercontent.com/73429092/149942192-5bf7a52b-03af-42ed-a5ed-cb16f111f54c.png)
 
 If we are unable to get the pin and if we want to exit game will give -1 as input.
-![image](https://user-images.githubusercontent.com/73429092/149940806-0cc23299-ad95-43c9-8860-6b84b7964f21.png)
+![image](https://user-images.githubusercontent.com/73429092/149942650-3908ad51-f6c4-443e-883a-d42821c792c2.png)
+
